@@ -1,0 +1,34 @@
+<div style="max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; color: #333;">💳 Güvenli Ödeme</h2>
+
+  <div style="background: linear-gradient(45deg, #004e92, #000428); color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+    <h3>VISA</h3>
+    <p style="font-size: 20px; letter-spacing: 2px;">4242 **** **** 4242</p>
+    <div style="display: flex; justify-content: space-between;">
+      <span>Card Holder</span>
+      <span>12/28</span>
+    </div>
+  </div>
+
+  <form (ngSubmit)="makePayment()">
+    <div style="margin-bottom: 15px;">
+      <label>Kart Numarası</label>
+      <input type="text" placeholder="4242 4242 4242 4242" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+      <div style="flex: 1;">
+        <label>Son Kullanma (AA/YY)</label>
+        <input type="text" placeholder="12/25" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+      <div style="flex: 1;">
+        <label>CVC</label>
+        <input type="text" placeholder="123" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+    </div>
+
+    <button type="submit" style="width: 100%; background-color: green; color: white; padding: 15px; border: none; border-radius: 5px; font-size: 18px; cursor: pointer;">
+      ✅ Ödemeyi Tamamla
+    </button>
+  </form>
+</div>

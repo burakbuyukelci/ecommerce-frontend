@@ -1,0 +1,22 @@
+<div style="max-width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <h2 style="text-align: center;">Kayıt Ol</h2>
+
+  <div style="margin-bottom: 15px;">
+    <label>Ad Soyad:</label>
+    <input type="text" [(ngModel)]="user.name" style="width: 100%; padding: 8px; margin-top: 5px;">
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label>Email:</label>
+    <input type="text" [(ngModel)]="user.email" style="width: 100%; padding: 8px; margin-top: 5px;">
+  </div>
+
+  <div style="margin-bottom: 15px;">
+    <label>Şifre:</label>
+    <input type="password" [(ngModel)]="user.password" style="width: 100%; padding: 8px; margin-top: 5px;">
+  </div>
+
+  <button (click)="register()" style="width: 100%; padding: 10px; background-color: green; color: white; border: none; border-radius: 4px; cursor: pointer;">
+    Kayıt Ol
+  </button>
+</div>

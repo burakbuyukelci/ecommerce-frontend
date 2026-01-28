@@ -1,0 +1,27 @@
+<div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+  <h1>🛒 Sepetim</h1>
+
+  <div *ngIf="items.length === 0" style="text-align: center; color: gray;">
+    <h3>Sepetiniz boş. Hadi alışveriş yapalım!</h3>
+  </div>
+
+  <div *ngIf="items.length > 0">
+    <div *ngFor="let item of items" style="display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; padding: 10px 0;">
+      <div>
+        <strong>{{ item.name }}</strong>
+        <p style="margin: 0; color: gray; font-size: 14px;">{{ item.description }}</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span style="color: green; font-weight: bold;">{{ item.price }} TL</span>
+        <button (click)="removeItem(item)" style="background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">Sil</button>
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; text-align: right;">
+      <h2>Toplam: {{ totalPrice }} TL</h2>
+      <button (click)="checkout()" style="background-color: green; color: white; padding: 15px 30px; font-size: 18px; border: none; cursor: pointer; border-radius: 5px;">
+        💳 Satın Al
+      </button>
+    </div>
+  </div>
+</div>
